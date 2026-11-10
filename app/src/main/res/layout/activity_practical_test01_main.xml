@@ -5,15 +5,68 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".PracticalTest01MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/left_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="27dp"
+        android:ems="10"
+        android:enabled="false"
+        android:gravity="center"
+        android:inputType="text"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/right_edit_text"
+        app:layout_constraintEnd_toStartOf="@+id/right_edit_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/right_edit_text" />
+
+    <EditText
+        android:id="@+id/right_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="164dp"
+        android:ems="10"
+        android:enabled="false"
+        android:gravity="center"
+        android:inputType="text"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/left_edit_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/left_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="12dp"
+        android:text="Press Me"
+        app:layout_constraintEnd_toEndOf="@+id/left_edit_text"
+        app:layout_constraintStart_toStartOf="@+id/left_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/left_edit_text" />
+
+    <Button
+        android:id="@+id/right_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Press Me too!"
+        app:layout_constraintEnd_toEndOf="@+id/right_edit_text"
+        app:layout_constraintStart_toStartOf="@+id/right_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/right_edit_text" />
+
+    <Button
+        android:id="@+id/navigate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Navigate to secondary activity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
